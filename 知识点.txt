@@ -1,0 +1,4 @@
+1、git的使用
+2、gradle 原理
+3、preference UI 架构
+待续。
