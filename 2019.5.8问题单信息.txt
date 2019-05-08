@@ -1,0 +1,15 @@
+getSharedPreferences
+SharedPreferences in credential encrypted storage are not available until after user is unlocked
+
+开机自启动：
+
+当存储受到保护并且通过LOCKED_BOOT_COMPLETED广播启动应用程序时，会发生此异常。
+
+
+我有一个BroadcastReceiver设置为侦听BOOT_COMPLETED和LOCKED_BOOT_COMPLETED事件，并且在Nougat出现时跟随Lint提示包含“directBootAware = true”。我永远不会怀疑偏好 - 异常实际上是由所有DirectBoot废话引起的。
+
+sharePreference访问了 受保护的存储区域，
+
+contextimpl 中 getSharePreference方法 抛出 异常
+
+https://developer.android.com/training/articles/direct-boot
