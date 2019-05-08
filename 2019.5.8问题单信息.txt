@@ -13,3 +13,6 @@ sharePreference访问了 受保护的存储区域，
 contextimpl 中 getSharePreference方法 抛出 异常
 
 https://developer.android.com/training/articles/direct-boot
+
+
+https://stackoverflow.com
