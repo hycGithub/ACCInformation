@@ -191,6 +191,9 @@ public class StkDialogActivity extends Activity {
          * check if there is an existing timer, and resume it. In this way we will
          * inform the SIM in correct time when there is no response from the User
          * to a dialog.
+         * 当另一个活动占据前景时，我们不希望在我们的活动恢复时重新启动终端响应计时器。
+         * 因此，我们将检查是否存在现有计时器，并恢复它。 这样，当用户没有响应对话框时，
+         * 我们将在正确的时间通知SIM。
          */
         if (mTimeoutIntent != null) {
             CatLog.d(LOG_TAG, "Pending Alarm! Let it finish counting down...");

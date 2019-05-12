@@ -28,7 +28,8 @@ import com.android.internal.telephony.cat.AppInterface;
 
 /**
  * Receiver class to get STK intents, broadcasted by telephony layer.
- *
+ * 接收器类获取STK意图，由电话层广播。
+ *时序：catService-->StkCmdService--> StkAppService--> MenuAcitivity
  */
 public class StkCmdReceiver extends BroadcastReceiver {
 
@@ -65,6 +66,8 @@ public class StkCmdReceiver extends BroadcastReceiver {
         } else if (StkAppService.OP_CARD_STATUS_CHANGED == op) {
             // If the Card is absent then check if the StkAppService is even
             // running before starting it to stop it right away
+            //如果卡不存在，则检查StkAppService是否在运行之前是否正在运行，然后立即停止
+
             if ((intent.getBooleanExtra(AppInterface.CARD_STATUS, false) == false)
                     && StkAppService.getInstance() == null) {
                 return;
