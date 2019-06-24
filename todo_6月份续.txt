@@ -1,0 +1,12 @@
+1、systrace 问题如何分析。
+
+2、需要看源码，不能只是停留解bug,
+
+3、需要动手操作写源码。
+
+
+
+
+CoordinatorLayout
+
+https://www.jianshu.com/p/6394d738713c
